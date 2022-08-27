@@ -8,8 +8,9 @@ async function bootstrap() {
 
   const PORT = process.env.PORT;
 
-  await app
-    .listen(PORT, '0.0.0.0')
-    .then(() => console.log(`Server start with port ${PORT}`));
+  // await app
+  //   .listen(PORT, '0.0.0.0')
+  //   .then(() => console.log(`Server start with port ${PORT}`));
+  await app.listen(3000);
 }
 bootstrap();
