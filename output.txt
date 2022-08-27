@@ -1,0 +1,6 @@
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+<none>       <none>    4a9d58614a92   12 minutes ago   942MB
+<none>       <none>    decec4cad3a7   17 minutes ago   910MB
+node         latest    ac3dcfe39c7e   2 days ago       991MB
+node         16.17     c8af85aa3027   4 days ago       910MB
+node         14.4      dcda6cd5e439   2 years ago      942MB

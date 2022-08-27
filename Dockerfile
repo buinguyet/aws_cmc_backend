@@ -1,14 +1,21 @@
-FROM node:16.17 as build
+FROM node:12
 
+# Create app directory, this is in our container/in our image
 WORKDIR /app
-COPY package*.json .
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
 COPY . .
+
 RUN npm run build
 
-FROM node:16.17
-WORKDIR /app
-COPY package.json .
-RUN npm install --only=production
-COPY --from=build /app/dist ./dist
-CMD npm run start:prod
+EXPOSE 8888
+CMD [ "node", "dist/main" ]
